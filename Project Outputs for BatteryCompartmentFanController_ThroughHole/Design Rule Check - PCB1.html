@@ -1,0 +1,391 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD25\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3/17/2025</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9:17:56 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc" class="file"><acronym title="D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc">D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">17</td></tr>
+</table>
+</td>
+</table><a name="IDCYY3CKEYHJJITK0XC4KSKLBWPZQL500C2DSMLPWH2LPX0ZKMJMH"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDD54WS4FU3Y2WGIF4T0LBZRGNEEJ4W3JTVYTCFQJZYKBDOFYGZNLM">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5S03TIDNT5BPPQF40SJ3N2HQRMO2IBO0PNTAFOB0P1ZVV4EHV2SN">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOT5SOCTIU5ODJZASGOH3XF4S0FMURYN32QKJ1RNNXJZTJTIHX5V">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDF1GPBOKUMLLXBYNZKUMU3CGCKFBYH0S124TQ5KMCSU0LOS2DINFC">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDELQN2EM3HWE1N4Z0AQUWREEAQIRBZ53AKP5BKZFVVGE3FWYJEAF">Width Constraint (Min=0.254mm) (Max=2.54mm) (Preferred=1mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGCPGGLPNZOICKDOZNEV5NLR4RKGSRVUCQF4TKCGY0NRT5S4IWEEJ">Routing Topology Rule(Topology=Shortest) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXXELCOEDJQJOJB1HVLGIHKT1HPVBLE11JNRWQ0C5COXBAUZNEO1G">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTXJXOWNIWNZWNWKUIC33XWUH4NLMTPJBB0ZW5NGZSLRXHL5G2SEB">Hole Size Constraint (Min=0.15mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXUZKC5ME4O2DNT3PL3Q0D55N3JIOHHA4M40JF5K3KRRW3PWOCA3G">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDF0INYKT4NRORMAPAJZ4LPNPR3GOU2OREUQLRKHM0S2YDSKIWTWVB">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPU3NJX3I0WA2H2PAYQI3IR0JTP0NK4JPRUQ2K3MKG33C1I0TY22J">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1PAWNXEJLCOALKWQSIFHACGLWNW31USL2GCU3NFRFMM4BHLBGBRI">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">12</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGALGWCL2MZV4MH4EM2VLSJUDJBKFT0A3RQ2SLM2QBUIBVTF15MC">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWRNTM5H0RNFZH3LZIW13GDO21PNB1CCN12HK2MKUPYZWEANIFGSC">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">17</td>
+</tr>
+</table><br><a name="IDPU3NJX3I0WA2H2PAYQI3IR0JTP0NK4JPRUQ2K3MKG33C1I0TY22J"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3010.108mil|Location2.X=3023.24mil|Location1.Y=1042.74mil|Location2.Y=1053.99mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3010.108mil|Location2.X=3023.24mil|Location1.Y=1042.74mil|Location2.Y=1053.99mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.19mm &lt; 0.254mm) Between Pad R9-A(75.585mm,25.567mm) on Multi-Layer And Text "R9" (76.438mm,29.37mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.19mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1408.32mil|Location2.X=1415.986mil|Location1.Y=2387.899mil|Location2.Y=2395.566mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1408.32mil|Location2.X=1415.986mil|Location1.Y=2387.899mil|Location2.Y=2395.566mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad SW1-1(37.05mm,61.75mm) on Multi-Layer And Track (28.4mm,60.75mm)(40.4mm,60.75mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1199.658mil|Location2.X=1207.325mil|Location1.Y=2387.899mil|Location2.Y=2395.566mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1199.658mil|Location2.X=1207.325mil|Location1.Y=2387.899mil|Location2.Y=2395.566mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad SW1-2(31.75mm,61.75mm) on Multi-Layer And Track (28.4mm,60.75mm)(40.4mm,60.75mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID1PAWNXEJLCOALKWQSIFHACGLWNW31USL2GCU3NFRFMM4BHLBGBRI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1200.421mil|Location2.X=1211.671mil|Location1.Y=1304.921mil|Location2.Y=1316.171mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1200.421mil|Location2.X=1211.671mil|Location1.Y=1304.921mil|Location2.Y=1316.171mil|Absolute=True">Silk To Silk Clearance Constraint: (0.2535mm (9.9821mil) &lt; 0.254mm (10mil)) Between Arc (31.078mm,30.597mm) on Top Overlay And Text "U6" (29.83mm,33.538mm) on Top Overlay Silk Text to Silk Clearance [0.254mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1290.805mil|Location2.X=1302.055mil|Location1.Y=988.946mil|Location2.Y=1000.196mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1290.805mil|Location2.X=1302.055mil|Location1.Y=988.946mil|Location2.Y=1000.196mil|Absolute=True">Silk To Silk Clearance Constraint: (0.098mm &lt; 0.254mm) Between Arc (33mm,20mm) on Top Overlay And Text "R13" (30.896mm,25.438mm) on Top Overlay Silk Text to Silk Clearance [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1411.697mil|Location2.X=1422.947mil|Location1.Y=1796.042mil|Location2.Y=1807.292mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1411.697mil|Location2.X=1422.947mil|Location1.Y=1796.042mil|Location2.Y=1807.292mil|Absolute=True">Silk To Silk Clearance Constraint: (0.098mm &lt; 0.254mm) Between Arc (36mm,40.5mm) on Top Overlay And Text "R11" (34.15mm,45.938mm) on Top Overlay Silk Text to Silk Clearance [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3374.39mil|Location2.X=3385.64mil|Location1.Y=1817.657mil|Location2.Y=1828.907mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3374.39mil|Location2.X=3385.64mil|Location1.Y=1817.657mil|Location2.Y=1828.907mil|Absolute=True">Silk To Silk Clearance Constraint: (0.2mm &lt; 0.254mm) Between Arc (86mm,41mm) on Top Overlay And Text "R3" (84.83mm,46.538mm) on Top Overlay Silk Text to Silk Clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2219.634mil|Location2.X=2230.884mil|Location1.Y=2474.69mil|Location2.Y=2485.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2219.634mil|Location2.X=2230.884mil|Location1.Y=2474.69mil|Location2.Y=2485.94mil|Absolute=True">Silk To Silk Clearance Constraint: (0.237mm &lt; 0.254mm) Between Text "+" (55.83mm,62.6mm) on Top Overlay And Track (56.69mm,61.857mm)(56.69mm,64.143mm) on Top Overlay Silk Text to Silk Clearance [0.237mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1761.919mil|Location2.X=1773.169mil|Location1.Y=2118.179mil|Location2.Y=2129.429mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1761.919mil|Location2.X=1773.169mil|Location1.Y=2118.179mil|Location2.Y=2129.429mil|Absolute=True">Silk To Silk Clearance Constraint: (0.133mm &lt; 0.254mm) Between Text "R12" (44.896mm,54.138mm) on Top Overlay And Track (43.813mm,53.778mm)(50.113mm,53.778mm) on Top Overlay Silk Text to Silk Clearance [0.133mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2444.399mil|Location2.X=2455.649mil|Location1.Y=544.803mil|Location2.Y=556.053mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2444.399mil|Location2.X=2455.649mil|Location1.Y=544.803mil|Location2.Y=556.053mil|Absolute=True">Silk To Silk Clearance Constraint: (0.161mm &lt; 0.254mm) Between Text "R14" (62.438mm,15.504mm) on Top Overlay And Track (62.05mm,12.975mm)(62.05mm,14.425mm) on Top Overlay Silk Text to Silk Clearance [0.161mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1810.955mil|Location2.X=1818.621mil|Location1.Y=2417.889mil|Location2.Y=2425.556mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1810.955mil|Location2.X=1818.621mil|Location1.Y=2417.889mil|Location2.Y=2425.556mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "R18" (46.096mm,59.988mm) on Top Overlay And Track (44.6mm,61.7mm)(51.4mm,61.7mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2739.667mil|Location2.X=2750.917mil|Location1.Y=2222.579mil|Location2.Y=2233.829mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2739.667mil|Location2.X=2750.917mil|Location1.Y=2222.579mil|Location2.Y=2233.829mil|Absolute=True">Silk To Silk Clearance Constraint: (0.23mm &lt; 0.254mm) Between Text "R2" (69.73mm,56.838mm) on Top Overlay And Track (67.82mm,56.418mm)(74.62mm,56.418mm) on Top Overlay Silk Text to Silk Clearance [0.23mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1591.585mil|Location2.X=1602.835mil|Location1.Y=2337.512mil|Location2.Y=2348.762mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1591.585mil|Location2.X=1602.835mil|Location1.Y=2337.512mil|Location2.Y=2348.762mil|Absolute=True">Silk To Silk Clearance Constraint: (0.084mm &lt; 0.254mm) Between Text "SW1" (40.738mm,60.277mm) on Top Overlay And Track (40.4mm,48.75mm)(40.4mm,60.75mm) on Top Overlay Silk Text to Silk Clearance [0.084mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.012mil|Location2.X=1914.262mil|Location1.Y=1642.784mil|Location2.Y=1654.034mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.012mil|Location2.X=1914.262mil|Location1.Y=1642.784mil|Location2.Y=1654.034mil|Absolute=True">Silk To Silk Clearance Constraint: (0.181mm &lt; 0.254mm) Between Text "U2" (46.738mm,41.87mm) on Top Overlay And Track (48.67mm,37.863mm)(48.67mm,43.163mm) on Top Overlay Silk Text to Silk Clearance [0.181mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1845.502mil|Location2.X=1856.752mil|Location1.Y=1365.071mil|Location2.Y=1376.321mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1845.502mil|Location2.X=1856.752mil|Location1.Y=1365.071mil|Location2.Y=1376.321mil|Absolute=True">Silk To Silk Clearance Constraint: (0.185mm &lt; 0.254mm) Between Text "U3" (47.238mm,35.07mm) on Top Overlay And Track (46.862mm,32.237mm)(46.862mm,35.327mm) on Top Overlay Silk Text to Silk Clearance [0.185mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDGALGWCL2MZV4MH4EM2VLSJUDJBKFT0A3RQ2SLM2QBUIBVTF15MC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3811.398mil|Location2.X=4178.837mil|Location1.Y=1764.154mil|Location2.Y=2376.314mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3811.398mil|Location2.X=4178.837mil|Location1.Y=1764.154mil|Location2.Y=2376.314mil|Absolute=True">Net Antennae: Via (101mm,49mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=937.382mil|Location2.X=1304.822mil|Location1.Y=189.35mil|Location2.Y=801.51mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Electrical\BatteryCompartmnetFanController_ThroughHole\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=937.382mil|Location2.X=1304.822mil|Location1.Y=189.35mil|Location2.Y=801.51mil|Absolute=True">Net Antennae: Via (28mm,9mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

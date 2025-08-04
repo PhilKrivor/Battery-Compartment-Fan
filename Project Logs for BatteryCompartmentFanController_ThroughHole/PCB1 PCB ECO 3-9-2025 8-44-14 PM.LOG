@@ -1,0 +1,99 @@
+Removed Pin From Net: NetName=GND Pin=C1-2
+Removed Pin From Net: NetName=GND Pin=C2-2
+Removed Pin From Net: NetName=GND Pin=C3-2
+Removed Pin From Net: NetName=GND Pin=C4-2
+Removed Pin From Net: NetName=GND Pin=C5-2
+Removed Pin From Net: NetName=GND Pin=C6-2
+Removed Pin From Net: NetName=VCC Pin=Q1-1
+Removed Pin From Net: NetName=VCC Pin=Q1-2
+Removed Pin From Net: NetName=VCC Pin=Q1-3
+Removed Pin From Net: NetName=VCC Pin=R1-2
+Removed Pin From Net: NetName=GND Pin=R4-1
+Removed Pin From Net: NetName=NetQ1_5 Pin=R6-2
+Removed Pin From Net: NetName=NetQ2_1 Pin=R8-E
+Removed Pin From Net: NetName=GND Pin=U3-3
+Removed Pin From Net: NetName=GND Pin=U3-6
+Removed Pin From Net: NetName=GND Pin=U3-7
+Removed Pin From Net: NetName=VCC Pin=U3-8
+Removed Pin From Net: NetName=GND Pin=U4-1
+Removed Pin From Net: NetName=NetQ2_1 Pin=U4-3
+Removed Pin From Net: NetName=NetQ1_5 Pin=U4-4
+Removed Pin From Net: NetName=NetQ1_5 Pin=U4-8
+Removed Member From Class: ClassName=MainSchematic Member=C1
+Removed Member From Class: ClassName=MainSchematic Member=C2
+Removed Member From Class: ClassName=MainSchematic Member=C3
+Removed Member From Class: ClassName=MainSchematic Member=C4
+Removed Member From Class: ClassName=MainSchematic Member=C5
+Removed Member From Class: ClassName=MainSchematic Member=C6
+Removed Member From Class: ClassName=MainSchematic Member=R4
+Change Component Footprint: Designator=U5 Old Footprint=D0008A_L New Footprint=8P3
+Change Footprint: Footprint Not Found TO220AB_VIS
+Change Component Footprint: Designator=R1 Old Footprint=RESA60-630X240 New Footprint=TRIM_PTN10-D100HB20
+Change Component Footprint: Designator=U3 Old Footprint=SO8_M New Footprint=TO92254P480H870-3
+Change Component Comment : Designator=U3 Old Comment=L78L08ABD13TR New Comment=AP7381-50V-A
+Change Component Comment : Designator=U5 Old Comment=LM35DMX/NOPB New Comment=ATtiny13A-PU
+Change Component Comment : Designator=R1 Old Comment=MFR-25FBF52-100K New Comment=PTN10-D100HB20
+Change Component Comment : Designator=U4 Old Comment=NE555DR New Comment=IRLZ44PBF
+Change Managed Component Library Link : Designator=U5 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=88358045-AB8E-4952-9427-1AECD7D11E88 New ItemGUID=98EC6231-9175-41FA-AC82-308701283F4C Old RevisionGUID=43A98D6A-2802-4979-AB19-DB2328CF3902 New RevisionGUID=1FE3F927-35D0-4B33-BC19-76CF6D89DBC3
+Change Managed Component Library Link : Designator=R1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=CF362220-219C-4241-B4E2-2BE82B2301FF New ItemGUID= Old RevisionGUID=C221EC0D-FB95-4A5C-9101-230356F10590 New RevisionGUID=
+Change Managed Component Library Link : Designator=U3 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=8B2B7BEE-76CA-46C7-9996-04D2AD3EFF31 New ItemGUID= Old RevisionGUID=A5B9FE75-6063-4532-87F3-6C4D1B478CE3 New RevisionGUID=
+Change Managed Component Library Link : Designator=U4 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=BB887B1F-E735-49F5-9073-A38D3F61DBE4 New ItemGUID= Old RevisionGUID=FE500B09-4ECF-4988-9563-9D28780E30F9 New RevisionGUID=
+Change component parameters: Designator = "R1" ("R1"); Footprint = "RESA60-630X240"; UniqueID = "\ZSTKJZJX" ("\ZSTKJZJX")
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/PTN10-D100HB20/CUI+Devices/view-part/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "CUI_purchase_URL"; Value = "https://www.cuidevices.com/product/motion-and-control/potentiometers/trimmer-potentiometers/ptn10-d100hb20?utm_source=snapeda.com&utm_medium=referral&utm_campaign=snapedaBOM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "CUI Devices"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "PTN10-D100HB20"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/PTN10-D100HB20/CUI+Devices/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "U3" ("U3"); Footprint = "SO8_M"; UniqueID = "\TGOKCXDM" ("\TGOKCXDM")
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/AP7381-50V-A/Diodes%20Inc./view-part/2887105/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "AP7381-50V-ADICT-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Diodes Inc."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "AP7381-50V-A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "TO-92 Diodes Inc."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/AP7381-50V-A/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/AP7381-50V-A/Diodes%20Inc./view-part/2887105/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "U4" ("U4"); Footprint = "FP-D0008A-IPC_A"; UniqueID = "\IPJWGTES" ("\IPJWGTES")
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "U5" ("U5"); Footprint = "D0008A_L"; UniqueID = "\RCJYZPEQ" ("\RCJYZPEQ")
+Change component parameters (AddParameter): Name = "Code_JEDEC"; Value = "MS-001-BA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.atmel.com/"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "ATtiny13A Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.atmel.com/dyn/resources/prod_documents/doc8126.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "ATtiny13A Summary"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.atmel.com/dyn/resources/prod_documents/8126S.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetVersion"; Value = "revE, Jul-2010"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "8-Lead, 0.300" Wide Body, Plastic Dual In-Line Package (PDIP)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "8P3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageVersion"; Value = "revB, Jan-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RevisionNote"; Value = "DatasheetVersion updated. URLs added."; VariantName = "[No Variations]"
+Added Component: Designator=Q(TO127P254X533-3)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "MCP9700A-E/TO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO-92 Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MCP9700A-E/TO/Microchip/view-part/105360/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VDD Pin=Q1-1
+Added Pin To Net: NetName=VDD Pin=Q1-2
+Added Pin To Net: NetName=VDD Pin=Q1-3
+Added Pin To Net: NetName=VDD Pin=Q-1
+Added Pin To Net: NetName=GND Pin=Q-3
+Added Pin To Net: NetName=GND Pin=R1-A
+Added Pin To Net: NetName=VCC Pin=R1-E
+Added Pin To Net: NetName=VCC Pin=U3-3
+Added Pin To Net: NetName=NetQ_2 Pin=Q-2
+Added Pin To Net: NetName=NetQ_2 Pin=R10-1
+Added Pin To Net: NetName=NetQ_2 Pin=U5-2
+Added Net: Name=NetQ_2
+Added Pin To Net: NetName=NetR1_S Pin=R1-S
+Added Pin To Net: NetName=NetR1_S Pin=R2-1
+Added Pin To Net: NetName=NetR1_S Pin=U5-3
+Added Net: Name=NetR1_S
+Added Member To Class: ClassName=MainSchematic Member=Component Q MCP9700A-E/TO

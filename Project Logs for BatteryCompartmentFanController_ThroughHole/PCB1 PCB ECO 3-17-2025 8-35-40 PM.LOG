@@ -1,0 +1,11 @@
+Added Component: Designator=D2(WP7113LZGCK)
+Added Component: Designator=R18(RESAD1100W55L680D260)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "MFR-25FRF52-10K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=R18-1
+Added Member To Class: ClassName=MainSchematic Member=Component D2 WP7113LZGCK
+Added Member To Class: ClassName=MainSchematic Member=Component R18 RNF14FTD7K50

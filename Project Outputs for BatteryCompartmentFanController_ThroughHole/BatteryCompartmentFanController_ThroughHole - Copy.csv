@@ -1,0 +1,19 @@
+Comment,Description,Designator,Quantity,Supply Voltage,Max Voltage,Quiescent Current (mA)
+,,,,,,
+1N4007,"Rectifier diode 1000 V 1 A DO-41, ,",D1,1,N/A,1000V,N/A
+G050P03T,"P-30V,-85A,RD(MAX)<5M@-10V,VTH-1",Q1,1,,-30V,N/A
+G30N02T,MOSFET N-CH 20V 30A TO-220,Q2,1,,20V,
+PTN10-D100HB20,"10 mm, 1 MΩ, Linear, Through Hole, Vertical, Shaftless Hexagonal Trimmer Potentiometer","R1, R9, R13",3,,,
+MFR-25FRF52-10K,RES 280K OHM 1/4W 1% AXIAL,"R2, R10",2,,,
+PTN10-D11HB20,,"R3, R11",2,,,
+RC1206JR-070RL,RES SMD 0 OHM JUMPER 1/4W 1206,"R4, R6, R8, R14, R15, R16, R17",7,,,
+MFR-25FBF52-100K,"Axial Resistor, 100 KOhm, +/- 1%, 0.25 W, -55 to 155 degC, 2-Pin THD, RoHS, Bulk","R5, R7, R12",3,,,
+LM393AP,IC DUAL DIFF COMPARATOR 8-DIP,U1,1,13V,30V,2.5000
+CD4001UBE,"CMOS Quad 2-Input NOR Gate, N0014A, TUBE",U2,1,,,0.0010
+AP7381-50V-A,Linear Voltage Regulator IC Positive Fixed 1 Output 150mA TO-92,U3,1,,,0.0025
+ATtiny13A-PU,"8-bit AVR Microcontroller, 1.8-5.5V, 20MHz, 1KB Flash, 64 Bytes EEPROM, 64 Bytes SRAM, 8-pin PDIP, Industrial Grade (-40�C to 85�C), Pb-Free",U5,1,,,6.0000
+MCP9700A-E/TO,"Temperature Sensor Analog, Local -40°C ~ 125°C 10mV/°C TO-92-3",U6,1,,,0.0015
+,,,,,,
+Passive dissipation through pullup resistors:,,,,,,0.0001
+,,,,,,
+Total Current,,,,,,8.5051

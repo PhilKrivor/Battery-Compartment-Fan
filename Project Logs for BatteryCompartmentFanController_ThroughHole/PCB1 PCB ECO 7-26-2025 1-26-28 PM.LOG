@@ -1,0 +1,10 @@
+Added Component: Designator=R8(RESAD1100W55L680D260)
+Added Component: Designator=R14(RESAD1100W55L680D260)
+Added Component: Designator=R16(RESAD1100W55L680D260)
+Added Pin To Net: NetName=VCC Pin=R8-1
+Added Pin To Net: NetName=NetD3_1 Pin=R8-2
+Added Pin To Net: NetName=VCC Pin=R14-1
+Added Pin To Net: NetName=NetD4_1 Pin=R14-2
+Added Member To Class: ClassName=MainSchematic Member=Component R8 MFR-25FBF52-12K7
+Added Member To Class: ClassName=MainSchematic Member=Component R14 MFR-25FBF52-12K7
+Added Member To Class: ClassName=MainSchematic Member=Component R16 MFR-25FBF52-12K7
